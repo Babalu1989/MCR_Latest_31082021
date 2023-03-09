@@ -1,0 +1,396 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using SimpleTest;
+using System.Data;
+using System.Web.UI.HtmlControls;
+using System.IO;
+using System.Text;
+
+public partial class _Default : System.Web.UI.Page
+{
+    SimpleBL objBL = new SimpleBL();
+    Image sortImage = new Image();
+
+    /// <summary>
+    /// Developed by Gourav Gouton on Date 14.11.2017 guide given by Swati Kaushik
+    /// Developed for Add and Modified Users
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["UserName"] != null && Session["Divison"]!=null)
+        {
+            if (!IsPostBack)
+            {
+                txtCompany.Text = Session["COMPANY"].ToString();
+                BindDivisioin();
+                BindRoleDetails();
+                
+
+                if ((Session["ROLE"] != null)&&(ddlRole.Items.Count>1))
+                {
+                    if (Session["ROLE"].ToString() == "V")
+                    {
+                        ddlRole.SelectedIndex = 1;
+                        ddlRole.Enabled = false;
+
+                        getEmployeeDetails("", Session["Divison"].ToString());
+                    }
+                    else if (Session["ROLE"].ToString() == "A")
+                    {
+                        ddlRole.SelectedIndex = 2;
+                        ddlRole.SelectedIndex = 1;
+                        ddlRole.Items.RemoveAt(3);
+                        ddlRole.Items.RemoveAt(3);
+                       // ddlRole.Items.RemoveAt(2);
+                       // ddlRole.Enabled = false;
+                        getEmployeeDetails("I", Session["Divison"].ToString());
+                        //getEmployeeDetails("V");
+                    }
+                    else if (Session["ROLE"].ToString() == "R")
+                    {
+                        ddlRole.Items.RemoveAt(2);
+                        ddlRole.SelectedIndex = 1;
+                        getEmployeeDetails("A", Session["Divison"].ToString());                       
+
+                    }
+                }
+            }
+        }
+        else
+        {
+            Session.Clear();
+            Session.Abandon();
+            Session.RemoveAll();
+            Response.Redirect("Default.aspx");
+        }
+    }
+
+    #region Sorting
+    protected void gvMainData_Sorting(object sender, GridViewSortEventArgs e)
+    {
+        DataTable _dtDetails = (DataTable)ViewState["Main"];
+        SetSortDirection(SortDireaction);
+        if (_dtDetails != null)
+        {
+            //Sort the data.
+            _dtDetails.DefaultView.Sort = e.SortExpression + " " + _sortDirection;
+            gvMainData.DataSource = _dtDetails;
+            gvMainData.DataBind();
+            SortDireaction = _sortDirection;
+            int columnIndex = 0;
+            foreach (DataControlFieldHeaderCell headerCell in gvMainData.HeaderRow.Cells)
+            {
+                if (headerCell.ContainingField.SortExpression == e.SortExpression)
+                {
+                    columnIndex = gvMainData.HeaderRow.Cells.GetCellIndex(headerCell);
+                }
+            }
+            gvMainData.HeaderRow.Cells[columnIndex].Controls.Add(sortImage);
+        }
+    }
+
+    public string SortDireaction
+    {
+        get
+        {
+            if (ViewState["SortDireaction"] == null)
+                return string.Empty;
+            else
+                return ViewState["SortDireaction"].ToString();
+        }
+        set
+        {
+            ViewState["SortDireaction"] = value;
+        }
+    }
+
+    protected void SetSortDirection(string sortDirection)
+    {
+        if (sortDirection == "ASC")
+        {
+            _sortDirection = "DESC";
+            sortImage.ImageUrl = "view_sort_ascending.png";
+
+        }
+        else
+        {
+            _sortDirection = "ASC";
+            sortImage.ImageUrl = "view_sort_descending.png";
+        }
+    }
+
+    public string _sortDirection { get; set; }
+    #endregion
+
+    #region Bind Data
+    public void BindDivisioin()
+    {
+        DataTable _dtBindName = objBL.getDivisionDetails(Convert.ToString(Session["Divison"]));
+        if (_dtBindName.Rows.Count > 0)
+        {
+            ddlDivision.DataSource = _dtBindName;
+            ddlDivision.DataTextField = "DIVISION_NAME";
+            ddlDivision.DataValueField = "DIST_CD";
+            ddlDivision.DataBind();
+            ddlDivision.Items.Insert(0, new ListItem("-Select One-", "0"));
+        }
+    }
+
+    public void BindRoleDetails()
+    {
+        DataTable _dtBindName = objBL.getRoleDetails(Convert.ToString(Session["LOGIN_TYPE"]));
+        if (_dtBindName.Rows.Count > 0)
+        {
+            ddlRole.DataSource = _dtBindName;
+            ddlRole.DataTextField = "ROLE_NAME";
+            ddlRole.DataValueField = "ROLE_ID";
+            ddlRole.DataBind();
+            ddlRole.Items.Insert(0, new ListItem("-Select One-", "0"));
+        }
+    }
+
+    public void getEmployeeDetails(string _sLoginType, string Div)
+    {
+        DataTable _dtDetails = new DataTable();
+
+        if (Session["ROLE"].ToString() == "V")
+            _dtDetails = objBL.getEmployeeDetails(Convert.ToString(Session["VENDOR_ID"]), "", _sLoginType, Convert.ToString(Session["Divison"]));
+        else
+            _dtDetails = objBL.getEmployeeDetails(Convert.ToString(Session["UserName"]), "", _sLoginType, Convert.ToString(Session["Divison"]));
+
+        if (_dtDetails.Rows.Count > 0)
+        {
+            gvMainData.DataSource = _dtDetails;
+            gvMainData.DataBind();
+
+            if (ViewState["Main"] != null)
+            {
+                ViewState["Main"] = null;
+            }
+            ViewState["Main"] = _dtDetails;
+        }
+    }
+    #endregion
+
+    protected void imgEmpID_Command(object sender, CommandEventArgs e)
+    {
+        try
+        {
+            DataTable _dtDetails = new DataTable();
+            string _sRole = string.Empty;
+            _sRole = e.CommandName.ToString();
+            if (_sRole.ToString() == "VENDOR")
+                _sRole = "V";
+            else if (_sRole.ToString() == "ADMIN")
+                _sRole = "A";
+            else if (_sRole.ToString() == "INSTALLER")
+                _sRole = "I";
+            else if (_sRole.ToString() == "POWER ADMIN")
+                _sRole = "R";
+            else if (_sRole.ToString() == "VIEWER")
+                _sRole = "V";
+            else if (_sRole.ToString() == "POWER VENDOR")
+                _sRole = "PV";
+
+            //if(Session["ROLE"].ToString() == "A")
+            //    _dtDetails = objBL.getEmployeeDetails(Convert.ToString(Session["UserName"]), e.CommandArgument.ToString(), "A", Convert.ToString(Session["Divison"]));
+            //else if (Session["ROLE"].ToString() == "R")
+            //    _dtDetails = objBL.getEmployeeDetails(Convert.ToString(Session["UserName"]), e.CommandArgument.ToString(), ddlRole.SelectedValue, Convert.ToString(Session["Divison"]));
+            //else
+            //    _dtDetails = objBL.getEmployeeDetails(Convert.ToString(Session["UserName"]), e.CommandArgument.ToString(), "", Convert.ToString(Session["Divison"]));
+
+            _dtDetails = objBL.getEmployeeDetails(Convert.ToString(Session["UserName"]), e.CommandArgument.ToString(), _sRole, Convert.ToString(Session["Divison"]));
+
+            if (_dtDetails.Rows.Count > 0)
+            {
+                txtName.Text = Convert.ToString(_dtDetails.Rows[0]["EMP_NAME"]);
+                txtPassword.Text = Convert.ToString(_dtDetails.Rows[0]["PASSWORD"]);
+                txtCompany.Text = Convert.ToString(_dtDetails.Rows[0]["COMPANY"]);
+                txtIMEINo.Text = Convert.ToString(_dtDetails.Rows[0]["IMEI_NO"]);
+                txtUserID.Text = Convert.ToString(_dtDetails.Rows[0]["EMP_ID"]);
+                txtMobNo.Text = Convert.ToString(_dtDetails.Rows[0]["MOBILE_NO"]);
+                txtDesgnation.Text = Convert.ToString(_dtDetails.Rows[0]["DESIGNATION"]);
+
+                txtUserID.ReadOnly = true;
+                txtCompany.ReadOnly = true;
+
+                for (int i = 0; i < ddlDivision.Items.Count; i++)
+                {
+                    if (ddlDivision.Items[i].Value == Convert.ToString(_dtDetails.Rows[0]["DIVISION"]))
+                    {
+                        ddlDivision.SelectedIndex = i;
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < ddlRole.Items.Count; i++)
+                {
+                    if (ddlRole.Items[i].Text == Convert.ToString(_dtDetails.Rows[0]["EMP_TYPE"]))
+                    {
+                        ddlRole.SelectedIndex = i;
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < ddlActivation.Items.Count; i++)
+                {
+                    if (ddlActivation.Items[i].Value == Convert.ToString(_dtDetails.Rows[0]["ACTIVE_FLAG"]))
+                    {
+                        ddlActivation.SelectedIndex = i;
+                        break;
+                    }
+                }
+
+                btnSave.Text = "Update";
+            }
+        }
+        catch (Exception ex)
+        {
+            SimpleMethods.show("Please Try Again.");
+        }
+    }
+
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AddUser.aspx");
+    }
+
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (btnSave.Text == "Confirm")
+                Confirm_User(ddlRole.SelectedValue);
+
+            if (btnSave.Text == "Update")
+                Update_User();
+
+            //SimpleMethods.MsgBoxWithLocation("User add successfully.", "AddUser.aspx", this);
+        }
+        catch (Exception ex)
+        {
+            SimpleMethods.show("Please Try Again.");
+        }
+    }
+
+    public void Confirm_User(string strtype)
+    {
+        DataTable _dtCheck = objBL.Check_USER_DETAILS(txtUserID.Text.Trim());
+        if (_dtCheck.Rows.Count > 0)
+        {
+            if (Convert.ToInt32(_dtCheck.Rows[0]["count"].ToString()) > 0)
+            {
+                SimpleMethods.show("User Already Exists.");
+                return;
+            }
+            else
+            {
+                txtPassword.Text = "12345678";
+
+                if (Session["ROLE"].ToString() == "A")
+                {
+                    objBL.insert_USER_DETAILS(txtName.Text.Trim(), txtUserID.Text.Trim(), txtIMEINo.Text.Trim(), ddlDivision.SelectedValue, "V", "V",
+                                                   Get_VendorID_DivWise(ddlDivision.SelectedValue), txtCompany.Text.Trim(), txtMobNo.Text, txtDesgnation.Text);
+
+                    objBL.insert_LOGIN_MST(txtUserID.Text.Trim(), txtPassword.Text.Trim(), ddlRole.SelectedValue, txtName.Text.Trim(), ddlDivision.SelectedValue);
+                    if (strtype == "V")
+                    {
+                        objBL.insert_Vendor_MST(txtName.Text.Trim(), txtUserID.Text.Trim(), ddlDivision.SelectedValue, txtMobNo.Text, txtDesgnation.Text, txtCompany.Text.Trim());
+                    }
+                    else if (strtype == "I")
+                    {
+                        objBL.insert_Insallter_DETAILS(txtUserID.Text.Trim(), txtName.Text.Trim(), ddlDivision.SelectedValue, txtMobNo.Text,
+                      Get_VendorID_DivWise(ddlDivision.SelectedValue), txtDesgnation.Text);
+                    }
+                }
+                else if (Session["ROLE"].ToString() == "R")
+                {
+
+                    objBL.insert_USER_DETAILS(txtName.Text.Trim(), txtUserID.Text.Trim(), txtIMEINo.Text.Trim(), ddlDivision.SelectedValue, ddlRole.SelectedValue, ddlRole.SelectedValue,
+                                                   Get_VendorID_DivWise(ddlDivision.SelectedValue), txtCompany.Text.Trim(), txtMobNo.Text, txtDesgnation.Text);
+
+                    objBL.insert_LOGIN_MST(txtUserID.Text.Trim(), txtPassword.Text.Trim(), ddlRole.SelectedValue, txtName.Text.Trim(), ddlDivision.SelectedValue);
+                }
+                else
+                {
+                    objBL.insert_USER_DETAILS(txtName.Text.Trim(), txtUserID.Text.Trim(), txtIMEINo.Text.Trim(), ddlDivision.SelectedValue, "I", "I",
+                                                Get_VendorID_DivWise(ddlDivision.SelectedValue), txtCompany.Text.Trim(), txtMobNo.Text, txtDesgnation.Text);
+
+                    objBL.insert_LOGIN_MST(txtUserID.Text.Trim(), txtPassword.Text.Trim(), ddlRole.SelectedValue, txtName.Text.Trim(), ddlDivision.SelectedValue);
+
+                    objBL.insert_Insallter_DETAILS(txtUserID.Text.Trim(), txtName.Text.Trim(), ddlDivision.SelectedValue, txtMobNo.Text,
+                       Get_VendorID_DivWise(ddlDivision.SelectedValue), txtDesgnation.Text);
+                }
+
+                SimpleMethods.MsgBoxWithLocation("User add successfully.", "AddUser.aspx", this);
+            }
+        }
+    }
+
+    private string Get_VendorID_DivWise(string _sDivisionID)
+    {
+        DataTable _dtVendor = new DataTable();
+        _dtVendor = objBL.GetVendorID_DIVWise(_sDivisionID);
+
+        if (_dtVendor.Rows.Count > 0)
+            return _dtVendor.Rows[0][0].ToString();
+        else
+            return "";
+
+    }
+    public void Update_User()
+    {
+        txtPassword.Text = "12345678";
+
+        if ((Session["ROLE"].ToString() == "A") || (Session["ROLE"].ToString() == "R"))
+        {
+            objBL.Update_USER_DETAILS(ddlActivation.SelectedValue, txtName.Text.Trim(), txtUserID.Text.Trim(), txtIMEINo.Text.Trim(), ddlDivision.SelectedValue,
+                                        ddlRole.SelectedValue, ddlRole.SelectedValue, txtUserID.Text.Trim(), txtCompany.Text.Trim(), txtMobNo.Text, txtDesgnation.Text);
+
+            objBL.update_LOGIN_MST(txtUserID.Text.Trim(), txtPassword.Text.Trim(), ddlRole.SelectedValue, ddlActivation.SelectedValue);//Change By Babalu Kumar 27052020
+
+            objBL.update_Vendor_MST(txtName.Text.Trim(), txtUserID.Text.Trim(), ddlDivision.SelectedValue, txtMobNo.Text, txtDesgnation.Text, txtCompany.Text.Trim(), ddlActivation.SelectedValue);//Change By Babalu Kumar 27052020
+
+        }
+        else
+        {
+            objBL.Update_USER_DETAILS(ddlActivation.SelectedValue, txtName.Text.Trim(), txtUserID.Text.Trim(), txtIMEINo.Text.Trim(), ddlDivision.SelectedValue,
+                                        ddlRole.SelectedValue, ddlRole.SelectedValue, Get_VendorID_DivWise(ddlDivision.SelectedValue), txtCompany.Text.Trim(), txtMobNo.Text, txtDesgnation.Text);
+
+            objBL.update_LOGIN_MST(txtUserID.Text.Trim(), txtPassword.Text.Trim(), ddlRole.SelectedValue, ddlActivation.SelectedValue);//Change By Babalu Kumar 27052020
+        }
+
+        SimpleMethods.MsgBoxWithLocation("Update successfully.", "AddUser.aspx", this);
+    }
+    protected void btnExit_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("HomePage.aspx");
+    }
+
+    protected void imgResetPass_Command(object sender, CommandEventArgs e)
+    {
+        string _sCode = e.CommandName.ToString();
+        objBL.Reset_Password(_sCode);
+
+        SimpleMethods.MsgBoxWithLocation("Password has been successfully Reset.", "AddUser.aspx", this);
+    }
+
+    protected void ddlRole_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (ddlRole.SelectedValue !="0")
+        {
+            getEmployeeDetails(ddlRole.SelectedValue, Session["Divison"].ToString());
+
+            txtName.Text = "";            
+            txtCompany.Text = "";
+            txtIMEINo.Text = "";
+            txtUserID.Text = "";
+        }
+    }
+}

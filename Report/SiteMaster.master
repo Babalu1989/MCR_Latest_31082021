@@ -1,0 +1,66 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SiteMaster.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../StyleSheet/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="main">
+        <div id="header">
+            <div id="logo">
+                <table align="center" width="100%">
+                    <tr>
+                        <td style="width: 10%">
+                            <img src="../Image/BSES.jpg" />
+                        </td>
+                        <td style="width: 80%; text-align: center">
+                            <h1>
+                                <i>Meter Allocation & Monitoring System</i></h1>
+                        </td>
+                        <td align="right" style="width:10%">
+                            <div id="divMenu" runat="server">                               
+                                <table>
+                                    <tr>
+                                        <td><asp:ImageButton ID="btnHome" runat="server" src="../Image/Home.jpg" Width="30px"
+                                    Height="30px" ToolTip="Home" OnClick="btnHome_Click" /></td>
+                                        <td><asp:ImageButton ID="btnImage" runat="server" src="../Image/Logout.png" Width="30px"
+                                    Height="30px" ToolTip="Log Out" OnClick="btnImage_Click" /></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div>
+                 <asp:Menu ID="Menu_One" runat="server" BackColor="CornflowerBlue" Width="100%" DynamicHorizontalOffset="2"
+                    Font-Names="Verdana" ForeColor="white" Orientation="Horizontal" StaticSubMenuIndent="10px"
+                    ItemWrap="True" ToolTip="True" Font-Size="18pt" Height="25px" Font-Italic="true">
+                    <StaticMenuStyle HorizontalPadding="20px" />
+                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" Font-Size="14px" />
+                    <StaticHoverStyle Font-Underline="True" ForeColor="White" BackColor="#0443a2" />
+                    <DynamicHoverStyle BackColor="#75AAFA" ForeColor="black" />
+                    <DynamicMenuStyle BackColor="#0443a2" BorderColor="White" BorderStyle="Solid" BorderWidth="1px" />
+                    <DynamicMenuItemStyle BorderColor="black" BorderStyle="Solid" BorderWidth="1px" Font-Names="Times New Roman"
+                        Font-Size="16px" ForeColor="White" HorizontalPadding="5px" VerticalPadding="2px"
+                        BackColor="#0443a2" />
+                </asp:Menu>
+            </div>
+        </div>
+        <div id="site_content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="footer">
+        Best viewed at 1366 x 768 resolution in I.E.7 or above, Google Chrome 3 or above,
+        Mozilla 3.5 or above
+    </div>
+    </form>
+</body>
+</html>

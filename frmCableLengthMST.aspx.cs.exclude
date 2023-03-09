@@ -1,0 +1,279 @@
+﻿/*
+ Developer Name:Babalu Kumar
+ Req. No.:REQ2705202020141
+ PCN No.:2107210708
+ Purpose:Add Cable lenth reconcilation process
+ */
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using SimpleTest;
+
+public partial class frmCableLengthMST : System.Web.UI.Page
+{
+    SimpleBL objBL = new SimpleBL();
+    string _gIntallerName = string.Empty;
+    int pCount = 0;
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["UserName"] != null)
+        {
+            if (!IsPostBack)
+            {
+                bindMainDataGrid("", "", "", "");
+                BindDivisioin();
+                BindVendor(Convert.ToString(Session["VENDOR_ID"]), Convert.ToString(Session["Divison"]), Convert.ToString(Session["ROLE"]));//Added By Babalu Kumar 30122020 Req. No. REQ04122020121216 And PCN No. 2021010104 for Add Multiple Vendor                  
+                tr2.Visible = false;
+                tr2.Visible = false;
+                btnSave.Attributes.Add("onclick", ClientScript.GetPostBackEventReference(btnSave, "") + ";this.value='Please wait....';this.disabled = true;");
+            }
+        }
+        else
+        {
+            Session.Clear();
+            Session.Abandon();
+            Session.RemoveAll();
+            Response.Redirect("Default.aspx");
+        }
+    }
+    private void bindMainDataGrid(string Materialno, string Fromdate, string Todate, string MaterialDoc)
+    {
+        lblSelectedCase.Text = "0";
+        lblTotalCase.Text = "0";
+        Div1.Visible = true;
+        DataTable _gdtDetails = objBL.GetCable_Details(Materialno, Fromdate, Todate, MaterialDoc, Session["Divison"].ToString().Substring(2, 3), Session["VENDOR_ID"].ToString());
+
+        if (_gdtDetails.Rows.Count > 0)
+        {
+            lblTotalCase.Text = _gdtDetails.Rows.Count.ToString();
+            gvMainData.DataSource = _gdtDetails;
+            gvMainData.DataBind();
+            if (ViewState["DataTable"] != null)
+            {
+                btnExcel.Visible = true;
+                ViewState["DataTable"] = null;
+                ViewState["DataTable"] = _gdtDetails;
+            }
+            else
+            {
+                btnExcel.Visible = true;
+                ViewState["DataTable"] = _gdtDetails;
+            }
+            DetailsData_Format();
+        }
+        else
+        {
+            btnExcel.Visible = false;
+            gvMainData.DataSource = null;
+            gvMainData.DataBind();
+        }
+    }
+    private void DetailsData_Format()
+    {
+        for (int i = 0; i < gvMainData.Rows.Count; i++)
+        {
+            gvMainData.Rows[i].Cells[2].Text = gvMainData.Rows[i].Cells[2].Text.TrimStart('0');
+            gvMainData.Rows[i].Cells[4].Text = gvMainData.Rows[i].Cells[4].Text.TrimStart('0');
+        }
+    }
+    public void BindDivisioin()
+    {
+        DataTable _dtBindName = objBL.getDivisionDetails(Convert.ToString(Session["Divison"]));
+        if (_dtBindName.Rows.Count > 0)
+        {
+            ddlDivision.DataSource = _dtBindName;
+            ddlDivision.DataTextField = "DIVISION_NAME";
+            ddlDivision.DataValueField = "DIST_CD";
+            ddlDivision.DataBind();
+            ddlDivision.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-ALL-", "0"));
+        }
+        if (_dtBindName.Rows.Count == 1)
+            ddlDivision.SelectedIndex = 1;
+
+        if (Session["ROLE"] != null)
+        {
+            if ((Session["ROLE"].ToString() == "A") || (Session["ROLE"].ToString() == "PV"))
+            {
+                ddlDivision.Items.Insert(0, new ListItem("-ALL-", "0"));
+
+                if (_dtBindName.Rows.Count == 2)
+                {
+                    ddlDivision.SelectedIndex = 2;
+                }
+            }
+        }
+    }
+    public void BindVendor(string Vendorid, string Division, string Roleid)//Added By Babalu Kumar 30122020 Req. No. REQ04122020121216 And PCN No. 2021010104 for Add Multiple Vendor 
+    {
+        DataTable _dtEmpName = objBL.getInstrallorFullDetails(Vendorid, Division, Roleid);
+        if (_dtEmpName.Rows.Count > 0)
+        {
+            ddlVendorName.DataSource = _dtEmpName;
+            ddlVendorName.DataTextField = "VENDOR_NAME";
+            ddlVendorName.DataValueField = "VENDOR_ID";
+            ddlVendorName.DataBind();
+            ddlVendorName.Items.Insert(0, new System.Web.UI.WebControls.ListItem("-ALL-", "0"));
+        }
+        if (_dtEmpName.Rows.Count == 1)
+            ddlVendorName.SelectedIndex = 1;
+    }
+    public void BindDivisioin1()
+    {
+        DataTable _dtBindName = objBL.getDivision1(Convert.ToString(Session["Divison"]));
+        if (_dtBindName.Rows.Count > 0)
+        {
+            ddldiv.DataSource = _dtBindName;
+            ddldiv.DataTextField = "DIVISION_NAME";
+            ddldiv.DataValueField = "DIST_CD";
+            ddldiv.DataBind();
+            ddldiv.Items.Insert(0, new ListItem("-ALL-", "0"));
+        }
+    }
+    protected void lknbutton_Click(object sender, EventArgs e)
+    {
+        var strdata = (Control)sender;
+        GridViewRow row = (GridViewRow)strdata.NamingContainer;
+        string strmid = row.Cells[0].Text.ToString();
+        Session["strid"] = strmid.ToString();
+        string strmaterialid = row.Cells[4].Text.ToString();
+        Session["materialid"] = strmaterialid.ToString();
+        //Tabid.Visible = true;
+        BindDivisioin1();
+        divAttachment.Visible = true;
+    }
+    //protected void btnUpdate_Click(object sender, EventArgs e)
+    //{
+    //    int i = 0;
+    //    if (txtDrumno.Text.Trim() == "" || txtDrumno.Text.Trim() == null)
+    //    {
+    //        SimpleMethods.show("Please Enter Drum Number");
+    //        txtDrumno.Focus();
+    //        return;
+    //    }
+    //    else if (txtCablesize.Text.Trim() == "" || txtCablesize.Text.Trim() == null)
+    //    {
+    //        SimpleMethods.show("Please Enter Cable Size");
+    //        txtCablesize.Focus();
+    //        return;
+    //    }
+    //    else if (txtCablelength.Text.Trim() == "" || txtCablelength.Text.Trim() == null)
+    //    {
+    //        SimpleMethods.show("Please Enter Cable Length");
+    //        txtCablelength.Focus();
+    //        return;
+    //    }
+    //    try
+    //    {
+    //        i = objBL.Update_Cablelength(txtDrumno.Text.ToString().ToUpper(), txtCablesize.Text.ToString().ToUpper(), txtCablelength.Text.ToString().ToUpper(), Session["strid"].ToString(), Session["materialid"].ToString(),txtserialnofrom.Text.ToString(),txtserialnoto.Text.ToString());
+    //        if (i > 0)
+    //        {
+    //            bindMainDataGrid("","","","");
+    //            txtDrumno.Text = "";
+    //            txtCablesize.Text = "";
+    //            txtCablelength.Text = "";
+    //            SimpleMethods.show("Record Updated Successfully.");
+    //            return;
+    //        }
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        SimpleMethods.show(ex.Message.ToString());
+    //        return;
+    //    }
+    //}
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        bindMainDataGrid(txtmaterial.Text.ToString(), txtPostingDateFrom.Text.ToString(), txtPostingDateTo.Text.ToString(), txtMaterialDocNo.Text.ToString());
+    }
+    protected void btnCancel_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("frmCableLengthMST.aspx");
+    }
+    protected void txtPostingDateTo_TextChanged(object sender, EventArgs e)
+    {
+        divAttachment.Visible = false;
+    }
+    protected void btnclose_Click(object sender, EventArgs e)
+    {
+        divAttachment.Visible = false;
+    }
+    protected void btnDocClose_Click(object sender, ImageClickEventArgs e)
+    {
+        divAttachment.Visible = false;
+    }
+    protected void btnsubmit_Click(object sender, EventArgs e)
+    {
+        int i = 0;
+        if (ddldiv.SelectedValue.Trim() == "0")
+        {
+            SimpleMethods.show("Please Select Division Option.");
+            ddldiv.Focus();
+            return;
+        }
+        if (txtDrumno.Text.Trim() == "" || txtDrumno.Text.Trim() == null)
+        {
+            SimpleMethods.show("Please Enter Drum Number");
+            txtDrumno.Focus();
+            return;
+        }
+        else if (txtCablesize.Text.Trim() == "" || txtCablesize.Text.Trim() == null)
+        {
+            SimpleMethods.show("Please Enter Cable Size");
+            txtCablesize.Focus();
+            return;
+        }
+        else if (txtCablelength.Text.Trim() == "" || txtCablelength.Text.Trim() == null)
+        {
+            SimpleMethods.show("Please Enter Cable Length");
+            txtCablelength.Focus();
+            return;
+        }
+        try
+        {
+            i = objBL.Update_Cablelength(txtDrumno.Text.ToString().ToUpper(), txtCablesize.Text.ToString().ToUpper(), txtCablelength.Text.ToString().ToUpper(), Session["strid"].ToString(), Session["materialid"].ToString(), txtserialnofrom.Text.ToString(), txtserialnoto.Text.ToString(), ddldiv.SelectedValue, ddlvendor.SelectedItem.Text.ToString(),ddlvendor.SelectedValue);
+            if (i > 0)
+            {
+                bindMainDataGrid("", "", "", "");
+                txtDrumno.Text = "";
+                txtCablesize.Text = "";
+                txtCablelength.Text = "";
+                ddldiv.SelectedIndex = 0;
+                ddlvendor.SelectedIndex = 0;
+                divAttachment.Visible = false;
+                SimpleMethods.show("Record Updated Successfully.");
+                return;
+            }
+        }
+        catch (Exception ex)
+        {
+            SimpleMethods.show(ex.Message.ToString());
+            return;
+        }
+    }
+    protected void ddldiv_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        BindVendor(ddldiv.SelectedValue);
+    }
+
+    public void BindVendor(string Vendor)
+    {
+        DataTable _dtVendor = objBL.getVendorId(Vendor);
+        if (_dtVendor.Rows.Count > 0)
+        {
+
+            ddlvendor.DataSource = _dtVendor;
+            ddlvendor.DataTextField = "VENDOR_ID";
+            ddlvendor.DataValueField = "VENDOR_NAME";
+            ddlvendor.DataBind();
+            ddlvendor.Items.Insert(0, new ListItem("-ALL-", "0"));
+        }
+    }
+    protected void ddlDivision_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        BindVendor("", ddlDivision.SelectedValue, Convert.ToString(Session["ROLE"]));//Added By Babalu Kumar 30122020 Req. No. REQ04122020121216 And PCN No. 2021010104 for Add Multiple Vendor 
+    }
+}

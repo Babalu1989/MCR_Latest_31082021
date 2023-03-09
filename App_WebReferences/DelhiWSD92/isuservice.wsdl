@@ -1,0 +1,2997 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ZBAPIDOCLIST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAufnr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_001" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_002" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_003" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_004" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_005" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_007" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_008" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_009" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_010" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_011" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_012" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_013" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_014" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_015" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_016" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_017" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_018" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_019" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_020" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_021" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_022" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_023" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_024" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_025" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_026" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_027" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_028" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_029" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_030" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_031" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_032" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_033" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_034" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_035" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_036" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_037" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_038" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_039" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_040" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_041" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strC_070" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strR_Cdll" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strR_Occ" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strR_Own" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strZ_Appltype" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPIDOCLISTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPIDOCLISTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DISPLAY_BILL_WEB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBillMonth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DISPLAY_BILL_WEBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_DISPLAY_BILL_WEBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_IVR_CREATESO_ISU">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCACrn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCAKNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMeterNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strISUOrder" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strComplaintType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strContractNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelephoneNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_IVR_CREATESO_ISUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_IVR_CREATESO_ISUResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSerialNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strConsumerNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelephoneNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strKNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strContractNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_CMS_ISU_CA_DISPLAYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Z_BAPI_CMS_ISU_CA_DISPLAYResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_CREATESO_POST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPMAufart" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPlanPlant" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strRegioGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strShortText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strILA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMFText" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserFieldCH20" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StrControkey" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSerialNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strComplaintGroup" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strContract" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMFText1" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_CREATESO_POSTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_CREATESO_POSTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_CALERT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCompanyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDivision" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUnit" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_CALERTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_CALERTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ONLINE_BILL_PDF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEBSKNO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ONLINE_BILL_PDFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_ONLINE_BILL_PDFResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DSS_SO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PARTNERCATEGORY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PARTNERTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TITLE_KEY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRSTNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LASTNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MIDDLENAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FATHERSNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HOUSE_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUILDING" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="POSTL_COD1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CITY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="E_MAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LANDLINE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MOBILE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FEMALE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MALE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JOBGR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LEGITTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDNUMBER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ORDER_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SHORTTEXT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PLANNINGPLANT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WORKCENTRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SYSTEMCOND" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PMACTIVITYTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="REQUESTNUM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NNUMBER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPLIEDCAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPLIEDLOAD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONNECTIONTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ORDERID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FLAG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DSS_SOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_DSS_SOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DSS_SO_ECC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PARTNERCATEGORY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PARTNERTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TITLE_KEY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRSTNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LASTNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MIDDLENAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FATHERSNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HOUSE_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUILDING" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="POSTL_COD1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CITY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="E_MAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LANDLINE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MOBILE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FEMALE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MALE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JOBGR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDNUMBER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ORDER_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SHORTTEXT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PLANNINGPLANT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WORKCENTRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SYSTEMCOND" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PMACTIVITYTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="REQUESTNUM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="NNUMBER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPLIEDCAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPLIEDLOAD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONNECTIONTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ORDERID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FLAG" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DSS_SO_ECCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_DSS_SO_ECCResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_ZDSS_WEB_LINK">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="I_ILART" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="I_VKONT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="I_VKONA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PARTNERCATEGORY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PARTNERTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TITLE_KEY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FIRSTNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LASTNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MIDDLENAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FATHERSNAME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="HOUSE_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BUILDING" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STR_SUPPL3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="POSTL_COD1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CITY" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="E_MAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LANDLINE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MOBILE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FEMALE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MALE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="JOBGR" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IDNUMBER" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PLANNINGPLANT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="WORKCENTRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SYSTEMCOND" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPLIEDCAT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPLIEDLOAD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="APPLIEDLOADKVA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CONNECTIONTYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="STATEMENT_CA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="START_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="START_TIME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FINISH_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FINISH_TIME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SORTFIELD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ABKRS" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_ZDSS_WEB_LINKResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Z_BAPI_ZDSS_WEB_LINKResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ENFORCEMENT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strContract" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ENFORCEMENTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_ENFORCEMENTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBI_WEBBILL_HIST">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBillMonth" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBI_WEBBILL_HISTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBI_WEBBILL_HISTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_IVRS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strContractAccountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_IVRSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Z_BAPI_IVRSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCRNNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_DSS_ISU_CA_DISPLAYResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Z_BAPI_DSS_ISU_CA_DISPLAYResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPIEBIZORDSTATUS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="stOrderNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPIEBIZORDSTATUSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPIEBIZORDSTATUSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_UPDATE_TNO">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCA_no" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTelephone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMobile" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strLandmark" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDISPATCH_CTRL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_UPDATE_TNOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_UPDATE_TNOResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_IDENTIFICATION">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strBP_NO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strType_ID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strID_Num" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_IDENTIFICATIONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_IDENTIFICATIONResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ZCS_CLI_WEB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTelephoneNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ZCS_CLI_WEBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_ZCS_CLI_WEBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_TEAM_ALLOCATION">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strIEMINumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strILART" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_TEAM_ALLOCATIONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_TEAM_ALLOCATIONResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_BI_EMAIL_COUNT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCRONAM" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strOBJTP" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDateYYYYMMDD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_BI_EMAIL_COUNTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_BI_EMAIL_COUNTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_EDISTRICT">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCANumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCRNNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_EDISTRICTResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_EDISTRICTResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_INPUT_CP_DETAILS">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="New_Ca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Old_Ca" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Theft_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zbilled_Ratcat" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zbill_Days" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zbill_Type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zcaseid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zcomp_Id" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zconn_Load" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zinsp_Date" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zinsp_Mtrread" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Znew_Meterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zold_Meterno" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Zphase" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DsInputTable">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Z_BAPI_INPUT_CP_DETAILSResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Z_BAPI_INPUT_CP_DETAILSResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DEMAND_NOTE_ONLINE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strOrder" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_DEMAND_NOTE_ONLINEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_DEMAND_NOTE_ONLINEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ISUACCOUNT_CHANGE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCONTRACT_ACCOUNT" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPartner" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValidDAte" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCONTRACTACCOUNTDATA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCONTRACTACCOUNTDATAX" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_ISUACCOUNT_CHANGEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_ISUACCOUNT_CHANGEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_FICA_DEMAND_NOTE">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strORDER_NO" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_FICA_DEMAND_NOTEResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_FICA_DEMAND_NOTEResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_CNT_APP_DETAIL_MOB">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strORDER_TYPE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strDIVISION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPPOINTMENT_START_DATE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAPPOINTMENT_TIME" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strREC_COUNT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_CNT_APP_DETAIL_MOBResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_CNT_APP_DETAIL_MOBResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_STATUS163">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strVKONT" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ZBAPI_STATUS163Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ZBAPI_STATUS163Result">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ZBAPIDOCLISTSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPIDOCLIST" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIDOCLISTSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPIDOCLISTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DISPLAY_BILL_WEBSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DISPLAY_BILL_WEB" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DISPLAY_BILL_WEBSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DISPLAY_BILL_WEBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IVR_CREATESO_ISUSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_IVR_CREATESO_ISU" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IVR_CREATESO_ISUSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_IVR_CREATESO_ISUResponse" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_CMS_ISU_CA_DISPLAYSoapIn">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_CMS_ISU_CA_DISPLAY" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_CMS_ISU_CA_DISPLAYSoapOut">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_CMS_ISU_CA_DISPLAYResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CREATESO_POSTSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_CREATESO_POST" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CREATESO_POSTSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_CREATESO_POSTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CALERTSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_CALERT" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CALERTSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_CALERTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ONLINE_BILL_PDFSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ONLINE_BILL_PDF" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ONLINE_BILL_PDFSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ONLINE_BILL_PDFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SOSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DSS_SO" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SOSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DSS_SOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SO_ECCSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DSS_SO_ECC" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SO_ECCSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DSS_SO_ECCResponse" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_ZDSS_WEB_LINKSoapIn">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_ZDSS_WEB_LINK" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_ZDSS_WEB_LINKSoapOut">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_ZDSS_WEB_LINKResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ENFORCEMENTSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ENFORCEMENT" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ENFORCEMENTSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ENFORCEMENTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBI_WEBBILL_HISTSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBI_WEBBILL_HIST" />
+  </wsdl:message>
+  <wsdl:message name="ZBI_WEBBILL_HISTSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBI_WEBBILL_HISTResponse" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_IVRSSoapIn">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_IVRS" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_IVRSSoapOut">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_IVRSResponse" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_DSS_ISU_CA_DISPLAYSoapIn">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_DSS_ISU_CA_DISPLAY" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_DSS_ISU_CA_DISPLAYSoapOut">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_DSS_ISU_CA_DISPLAYResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIEBIZORDSTATUSSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPIEBIZORDSTATUS" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIEBIZORDSTATUSSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPIEBIZORDSTATUSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_UPDATE_TNOSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_UPDATE_TNO" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_UPDATE_TNOSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_UPDATE_TNOResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IDENTIFICATIONSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_IDENTIFICATION" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IDENTIFICATIONSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_IDENTIFICATIONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ZCS_CLI_WEBSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ZCS_CLI_WEB" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ZCS_CLI_WEBSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ZCS_CLI_WEBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_TEAM_ALLOCATIONSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_TEAM_ALLOCATION" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_TEAM_ALLOCATIONSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_TEAM_ALLOCATIONResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_BI_EMAIL_COUNTSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_BI_EMAIL_COUNT" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_BI_EMAIL_COUNTSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_BI_EMAIL_COUNTResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_EDISTRICTSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_EDISTRICT" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_EDISTRICTSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_EDISTRICTResponse" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_INPUT_CP_DETAILSSoapIn">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_INPUT_CP_DETAILS" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_INPUT_CP_DETAILSSoapOut">
+    <wsdl:part name="parameters" element="tns:Z_BAPI_INPUT_CP_DETAILSResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DEMAND_NOTE_ONLINESoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DEMAND_NOTE_ONLINE" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DEMAND_NOTE_ONLINESoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_DEMAND_NOTE_ONLINEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ISUACCOUNT_CHANGESoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ISUACCOUNT_CHANGE" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ISUACCOUNT_CHANGESoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_ISUACCOUNT_CHANGEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_FICA_DEMAND_NOTESoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_FICA_DEMAND_NOTE" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_FICA_DEMAND_NOTESoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_FICA_DEMAND_NOTEResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CNT_APP_DETAIL_MOBSoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_CNT_APP_DETAIL_MOB" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CNT_APP_DETAIL_MOBSoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_CNT_APP_DETAIL_MOBResponse" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_STATUS163SoapIn">
+    <wsdl:part name="parameters" element="tns:ZBAPI_STATUS163" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_STATUS163SoapOut">
+    <wsdl:part name="parameters" element="tns:ZBAPI_STATUS163Response" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIDOCLISTHttpGetIn">
+    <wsdl:part name="strAufnr" type="s:string" />
+    <wsdl:part name="strC_001" type="s:string" />
+    <wsdl:part name="strC_002" type="s:string" />
+    <wsdl:part name="strC_003" type="s:string" />
+    <wsdl:part name="strC_004" type="s:string" />
+    <wsdl:part name="strC_005" type="s:string" />
+    <wsdl:part name="strC_007" type="s:string" />
+    <wsdl:part name="strC_008" type="s:string" />
+    <wsdl:part name="strC_009" type="s:string" />
+    <wsdl:part name="strC_010" type="s:string" />
+    <wsdl:part name="strC_011" type="s:string" />
+    <wsdl:part name="strC_012" type="s:string" />
+    <wsdl:part name="strC_013" type="s:string" />
+    <wsdl:part name="strC_014" type="s:string" />
+    <wsdl:part name="strC_015" type="s:string" />
+    <wsdl:part name="strC_016" type="s:string" />
+    <wsdl:part name="strC_017" type="s:string" />
+    <wsdl:part name="strC_018" type="s:string" />
+    <wsdl:part name="strC_019" type="s:string" />
+    <wsdl:part name="strC_020" type="s:string" />
+    <wsdl:part name="strC_021" type="s:string" />
+    <wsdl:part name="strC_022" type="s:string" />
+    <wsdl:part name="strC_023" type="s:string" />
+    <wsdl:part name="strC_024" type="s:string" />
+    <wsdl:part name="strC_025" type="s:string" />
+    <wsdl:part name="strC_026" type="s:string" />
+    <wsdl:part name="strC_027" type="s:string" />
+    <wsdl:part name="strC_028" type="s:string" />
+    <wsdl:part name="strC_029" type="s:string" />
+    <wsdl:part name="strC_030" type="s:string" />
+    <wsdl:part name="strC_031" type="s:string" />
+    <wsdl:part name="strC_032" type="s:string" />
+    <wsdl:part name="strC_033" type="s:string" />
+    <wsdl:part name="strC_034" type="s:string" />
+    <wsdl:part name="strC_035" type="s:string" />
+    <wsdl:part name="strC_036" type="s:string" />
+    <wsdl:part name="strC_037" type="s:string" />
+    <wsdl:part name="strC_038" type="s:string" />
+    <wsdl:part name="strC_039" type="s:string" />
+    <wsdl:part name="strC_040" type="s:string" />
+    <wsdl:part name="strC_041" type="s:string" />
+    <wsdl:part name="strC_070" type="s:string" />
+    <wsdl:part name="strR_Cdll" type="s:string" />
+    <wsdl:part name="strR_Occ" type="s:string" />
+    <wsdl:part name="strR_Own" type="s:string" />
+    <wsdl:part name="strZ_Appltype" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIDOCLISTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DISPLAY_BILL_WEBHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strBillMonth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DISPLAY_BILL_WEBHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IVR_CREATESO_ISUHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strCACrn" type="s:string" />
+    <wsdl:part name="strCAKNumber" type="s:string" />
+    <wsdl:part name="strMeterNumber" type="s:string" />
+    <wsdl:part name="strISUOrder" type="s:string" />
+    <wsdl:part name="strComplaintType" type="s:string" />
+    <wsdl:part name="strContractNumber" type="s:string" />
+    <wsdl:part name="strTelephoneNo" type="s:string" />
+    <wsdl:part name="strDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IVR_CREATESO_ISUHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_CMS_ISU_CA_DISPLAYHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strSerialNumber" type="s:string" />
+    <wsdl:part name="strConsumerNumber" type="s:string" />
+    <wsdl:part name="strTelephoneNumber" type="s:string" />
+    <wsdl:part name="strKNumber" type="s:string" />
+    <wsdl:part name="strContractNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_CMS_ISU_CA_DISPLAYHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CREATESO_POSTHttpGetIn">
+    <wsdl:part name="strPMAufart" type="s:string" />
+    <wsdl:part name="strPlanPlant" type="s:string" />
+    <wsdl:part name="strRegioGroup" type="s:string" />
+    <wsdl:part name="strShortText" type="s:string" />
+    <wsdl:part name="strILA" type="s:string" />
+    <wsdl:part name="strMFText" type="s:string" />
+    <wsdl:part name="strUserFieldCH20" type="s:string" />
+    <wsdl:part name="StrControkey" type="s:string" />
+    <wsdl:part name="strSerialNumber" type="s:string" />
+    <wsdl:part name="strComplaintGroup" type="s:string" />
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strContract" type="s:string" />
+    <wsdl:part name="strMFText1" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CREATESO_POSTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CALERTHttpGetIn">
+    <wsdl:part name="strCompanyCode" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="strDivision" type="s:string" />
+    <wsdl:part name="strUnit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CALERTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ONLINE_BILL_PDFHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strEBSKNO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ONLINE_BILL_PDFHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SOHttpGetIn">
+    <wsdl:part name="PARTNERCATEGORY" type="s:string" />
+    <wsdl:part name="PARTNERTYPE" type="s:string" />
+    <wsdl:part name="TITLE_KEY" type="s:string" />
+    <wsdl:part name="FIRSTNAME" type="s:string" />
+    <wsdl:part name="LASTNAME" type="s:string" />
+    <wsdl:part name="MIDDLENAME" type="s:string" />
+    <wsdl:part name="FATHERSNAME" type="s:string" />
+    <wsdl:part name="HOUSE_NO" type="s:string" />
+    <wsdl:part name="BUILDING" type="s:string" />
+    <wsdl:part name="STR_SUPPL1" type="s:string" />
+    <wsdl:part name="STR_SUPPL2" type="s:string" />
+    <wsdl:part name="STR_SUPPL3" type="s:string" />
+    <wsdl:part name="POSTL_COD1" type="s:string" />
+    <wsdl:part name="CITY" type="s:string" />
+    <wsdl:part name="E_MAIL" type="s:string" />
+    <wsdl:part name="LANDLINE" type="s:string" />
+    <wsdl:part name="MOBILE" type="s:string" />
+    <wsdl:part name="FEMALE" type="s:string" />
+    <wsdl:part name="MALE" type="s:string" />
+    <wsdl:part name="JOBGR" type="s:string" />
+    <wsdl:part name="LEGITTYPE" type="s:string" />
+    <wsdl:part name="IDNUMBER" type="s:string" />
+    <wsdl:part name="ORDER_TYPE" type="s:string" />
+    <wsdl:part name="SHORTTEXT" type="s:string" />
+    <wsdl:part name="PLANNINGPLANT" type="s:string" />
+    <wsdl:part name="WORKCENTRE" type="s:string" />
+    <wsdl:part name="SYSTEMCOND" type="s:string" />
+    <wsdl:part name="PMACTIVITYTYPE" type="s:string" />
+    <wsdl:part name="REQUESTNUM" type="s:string" />
+    <wsdl:part name="NNUMBER" type="s:string" />
+    <wsdl:part name="APPLIEDCAT" type="s:string" />
+    <wsdl:part name="APPLIEDLOAD" type="s:string" />
+    <wsdl:part name="CONNECTIONTYPE" type="s:string" />
+    <wsdl:part name="ORDERID" type="s:string" />
+    <wsdl:part name="FLAG" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SOHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SO_ECCHttpGetIn">
+    <wsdl:part name="PARTNERCATEGORY" type="s:string" />
+    <wsdl:part name="PARTNERTYPE" type="s:string" />
+    <wsdl:part name="TITLE_KEY" type="s:string" />
+    <wsdl:part name="FIRSTNAME" type="s:string" />
+    <wsdl:part name="LASTNAME" type="s:string" />
+    <wsdl:part name="MIDDLENAME" type="s:string" />
+    <wsdl:part name="FATHERSNAME" type="s:string" />
+    <wsdl:part name="HOUSE_NO" type="s:string" />
+    <wsdl:part name="BUILDING" type="s:string" />
+    <wsdl:part name="STR_SUPPL1" type="s:string" />
+    <wsdl:part name="STR_SUPPL2" type="s:string" />
+    <wsdl:part name="STR_SUPPL3" type="s:string" />
+    <wsdl:part name="POSTL_COD1" type="s:string" />
+    <wsdl:part name="CITY" type="s:string" />
+    <wsdl:part name="E_MAIL" type="s:string" />
+    <wsdl:part name="LANDLINE" type="s:string" />
+    <wsdl:part name="MOBILE" type="s:string" />
+    <wsdl:part name="FEMALE" type="s:string" />
+    <wsdl:part name="MALE" type="s:string" />
+    <wsdl:part name="JOBGR" type="s:string" />
+    <wsdl:part name="IDTYPE" type="s:string" />
+    <wsdl:part name="IDNUMBER" type="s:string" />
+    <wsdl:part name="ORDER_TYPE" type="s:string" />
+    <wsdl:part name="SHORTTEXT" type="s:string" />
+    <wsdl:part name="PLANNINGPLANT" type="s:string" />
+    <wsdl:part name="WORKCENTRE" type="s:string" />
+    <wsdl:part name="SYSTEMCOND" type="s:string" />
+    <wsdl:part name="PMACTIVITYTYPE" type="s:string" />
+    <wsdl:part name="REQUESTNUM" type="s:string" />
+    <wsdl:part name="NNUMBER" type="s:string" />
+    <wsdl:part name="APPLIEDCAT" type="s:string" />
+    <wsdl:part name="APPLIEDLOAD" type="s:string" />
+    <wsdl:part name="CONNECTIONTYPE" type="s:string" />
+    <wsdl:part name="ORDERID" type="s:string" />
+    <wsdl:part name="FLAG" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SO_ECCHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_ZDSS_WEB_LINKHttpGetIn">
+    <wsdl:part name="I_ILART" type="s:string" />
+    <wsdl:part name="I_VKONT" type="s:string" />
+    <wsdl:part name="I_VKONA" type="s:string" />
+    <wsdl:part name="PARTNERCATEGORY" type="s:string" />
+    <wsdl:part name="PARTNERTYPE" type="s:string" />
+    <wsdl:part name="TITLE_KEY" type="s:string" />
+    <wsdl:part name="FIRSTNAME" type="s:string" />
+    <wsdl:part name="LASTNAME" type="s:string" />
+    <wsdl:part name="MIDDLENAME" type="s:string" />
+    <wsdl:part name="FATHERSNAME" type="s:string" />
+    <wsdl:part name="HOUSE_NO" type="s:string" />
+    <wsdl:part name="BUILDING" type="s:string" />
+    <wsdl:part name="STR_SUPPL1" type="s:string" />
+    <wsdl:part name="STR_SUPPL2" type="s:string" />
+    <wsdl:part name="STR_SUPPL3" type="s:string" />
+    <wsdl:part name="POSTL_COD1" type="s:string" />
+    <wsdl:part name="CITY" type="s:string" />
+    <wsdl:part name="E_MAIL" type="s:string" />
+    <wsdl:part name="LANDLINE" type="s:string" />
+    <wsdl:part name="MOBILE" type="s:string" />
+    <wsdl:part name="FEMALE" type="s:string" />
+    <wsdl:part name="MALE" type="s:string" />
+    <wsdl:part name="JOBGR" type="s:string" />
+    <wsdl:part name="IDTYPE" type="s:string" />
+    <wsdl:part name="IDNUMBER" type="s:string" />
+    <wsdl:part name="PLANNINGPLANT" type="s:string" />
+    <wsdl:part name="WORKCENTRE" type="s:string" />
+    <wsdl:part name="SYSTEMCOND" type="s:string" />
+    <wsdl:part name="APPLIEDCAT" type="s:string" />
+    <wsdl:part name="APPLIEDLOAD" type="s:string" />
+    <wsdl:part name="APPLIEDLOADKVA" type="s:string" />
+    <wsdl:part name="CONNECTIONTYPE" type="s:string" />
+    <wsdl:part name="STATEMENT_CA" type="s:string" />
+    <wsdl:part name="START_DATE" type="s:string" />
+    <wsdl:part name="START_TIME" type="s:string" />
+    <wsdl:part name="FINISH_DATE" type="s:string" />
+    <wsdl:part name="FINISH_TIME" type="s:string" />
+    <wsdl:part name="SORTFIELD" type="s:string" />
+    <wsdl:part name="ABKRS" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_ZDSS_WEB_LINKHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ENFORCEMENTHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strContract" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ENFORCEMENTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBI_WEBBILL_HISTHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strBillMonth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBI_WEBBILL_HISTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_IVRSHttpGetIn">
+    <wsdl:part name="strContractAccountNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_IVRSHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_DSS_ISU_CA_DISPLAYHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strCRNNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_DSS_ISU_CA_DISPLAYHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIEBIZORDSTATUSHttpGetIn">
+    <wsdl:part name="stOrderNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIEBIZORDSTATUSHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_UPDATE_TNOHttpGetIn">
+    <wsdl:part name="strCA_no" type="s:string" />
+    <wsdl:part name="strTelephone" type="s:string" />
+    <wsdl:part name="strMobile" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strLandmark" type="s:string" />
+    <wsdl:part name="strDISPATCH_CTRL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_UPDATE_TNOHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IDENTIFICATIONHttpGetIn">
+    <wsdl:part name="strBP_NO" type="s:string" />
+    <wsdl:part name="strType_ID" type="s:string" />
+    <wsdl:part name="strID_Num" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IDENTIFICATIONHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ZCS_CLI_WEBHttpGetIn">
+    <wsdl:part name="strTelephoneNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ZCS_CLI_WEBHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_TEAM_ALLOCATIONHttpGetIn">
+    <wsdl:part name="strIEMINumber" type="s:string" />
+    <wsdl:part name="strILART" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="strTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_TEAM_ALLOCATIONHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_BI_EMAIL_COUNTHttpGetIn">
+    <wsdl:part name="strCRONAM" type="s:string" />
+    <wsdl:part name="strOBJTP" type="s:string" />
+    <wsdl:part name="strDateYYYYMMDD" type="s:string" />
+    <wsdl:part name="strTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_BI_EMAIL_COUNTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_EDISTRICTHttpGetIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strCRNNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_EDISTRICTHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DEMAND_NOTE_ONLINEHttpGetIn">
+    <wsdl:part name="strOrder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DEMAND_NOTE_ONLINEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ISUACCOUNT_CHANGEHttpGetIn">
+    <wsdl:part name="strCONTRACT_ACCOUNT" type="s:string" />
+    <wsdl:part name="strPartner" type="s:string" />
+    <wsdl:part name="strValidDAte" type="s:string" />
+    <wsdl:part name="strCONTRACTACCOUNTDATA" type="s:string" />
+    <wsdl:part name="strCONTRACTACCOUNTDATAX" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ISUACCOUNT_CHANGEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_FICA_DEMAND_NOTEHttpGetIn">
+    <wsdl:part name="strORDER_NO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_FICA_DEMAND_NOTEHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CNT_APP_DETAIL_MOBHttpGetIn">
+    <wsdl:part name="strORDER_TYPE" type="s:string" />
+    <wsdl:part name="strDIVISION" type="s:string" />
+    <wsdl:part name="strAPPOINTMENT_START_DATE" type="s:string" />
+    <wsdl:part name="strAPPOINTMENT_TIME" type="s:string" />
+    <wsdl:part name="strREC_COUNT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CNT_APP_DETAIL_MOBHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_STATUS163HttpGetIn">
+    <wsdl:part name="strVKONT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_STATUS163HttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIDOCLISTHttpPostIn">
+    <wsdl:part name="strAufnr" type="s:string" />
+    <wsdl:part name="strC_001" type="s:string" />
+    <wsdl:part name="strC_002" type="s:string" />
+    <wsdl:part name="strC_003" type="s:string" />
+    <wsdl:part name="strC_004" type="s:string" />
+    <wsdl:part name="strC_005" type="s:string" />
+    <wsdl:part name="strC_007" type="s:string" />
+    <wsdl:part name="strC_008" type="s:string" />
+    <wsdl:part name="strC_009" type="s:string" />
+    <wsdl:part name="strC_010" type="s:string" />
+    <wsdl:part name="strC_011" type="s:string" />
+    <wsdl:part name="strC_012" type="s:string" />
+    <wsdl:part name="strC_013" type="s:string" />
+    <wsdl:part name="strC_014" type="s:string" />
+    <wsdl:part name="strC_015" type="s:string" />
+    <wsdl:part name="strC_016" type="s:string" />
+    <wsdl:part name="strC_017" type="s:string" />
+    <wsdl:part name="strC_018" type="s:string" />
+    <wsdl:part name="strC_019" type="s:string" />
+    <wsdl:part name="strC_020" type="s:string" />
+    <wsdl:part name="strC_021" type="s:string" />
+    <wsdl:part name="strC_022" type="s:string" />
+    <wsdl:part name="strC_023" type="s:string" />
+    <wsdl:part name="strC_024" type="s:string" />
+    <wsdl:part name="strC_025" type="s:string" />
+    <wsdl:part name="strC_026" type="s:string" />
+    <wsdl:part name="strC_027" type="s:string" />
+    <wsdl:part name="strC_028" type="s:string" />
+    <wsdl:part name="strC_029" type="s:string" />
+    <wsdl:part name="strC_030" type="s:string" />
+    <wsdl:part name="strC_031" type="s:string" />
+    <wsdl:part name="strC_032" type="s:string" />
+    <wsdl:part name="strC_033" type="s:string" />
+    <wsdl:part name="strC_034" type="s:string" />
+    <wsdl:part name="strC_035" type="s:string" />
+    <wsdl:part name="strC_036" type="s:string" />
+    <wsdl:part name="strC_037" type="s:string" />
+    <wsdl:part name="strC_038" type="s:string" />
+    <wsdl:part name="strC_039" type="s:string" />
+    <wsdl:part name="strC_040" type="s:string" />
+    <wsdl:part name="strC_041" type="s:string" />
+    <wsdl:part name="strC_070" type="s:string" />
+    <wsdl:part name="strR_Cdll" type="s:string" />
+    <wsdl:part name="strR_Occ" type="s:string" />
+    <wsdl:part name="strR_Own" type="s:string" />
+    <wsdl:part name="strZ_Appltype" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIDOCLISTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DISPLAY_BILL_WEBHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strBillMonth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DISPLAY_BILL_WEBHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IVR_CREATESO_ISUHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strCACrn" type="s:string" />
+    <wsdl:part name="strCAKNumber" type="s:string" />
+    <wsdl:part name="strMeterNumber" type="s:string" />
+    <wsdl:part name="strISUOrder" type="s:string" />
+    <wsdl:part name="strComplaintType" type="s:string" />
+    <wsdl:part name="strContractNumber" type="s:string" />
+    <wsdl:part name="strTelephoneNo" type="s:string" />
+    <wsdl:part name="strDescription" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IVR_CREATESO_ISUHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_CMS_ISU_CA_DISPLAYHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strSerialNumber" type="s:string" />
+    <wsdl:part name="strConsumerNumber" type="s:string" />
+    <wsdl:part name="strTelephoneNumber" type="s:string" />
+    <wsdl:part name="strKNumber" type="s:string" />
+    <wsdl:part name="strContractNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_CMS_ISU_CA_DISPLAYHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CREATESO_POSTHttpPostIn">
+    <wsdl:part name="strPMAufart" type="s:string" />
+    <wsdl:part name="strPlanPlant" type="s:string" />
+    <wsdl:part name="strRegioGroup" type="s:string" />
+    <wsdl:part name="strShortText" type="s:string" />
+    <wsdl:part name="strILA" type="s:string" />
+    <wsdl:part name="strMFText" type="s:string" />
+    <wsdl:part name="strUserFieldCH20" type="s:string" />
+    <wsdl:part name="StrControkey" type="s:string" />
+    <wsdl:part name="strSerialNumber" type="s:string" />
+    <wsdl:part name="strComplaintGroup" type="s:string" />
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strContract" type="s:string" />
+    <wsdl:part name="strMFText1" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CREATESO_POSTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CALERTHttpPostIn">
+    <wsdl:part name="strCompanyCode" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="strDivision" type="s:string" />
+    <wsdl:part name="strUnit" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CALERTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ONLINE_BILL_PDFHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strEBSKNO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ONLINE_BILL_PDFHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SOHttpPostIn">
+    <wsdl:part name="PARTNERCATEGORY" type="s:string" />
+    <wsdl:part name="PARTNERTYPE" type="s:string" />
+    <wsdl:part name="TITLE_KEY" type="s:string" />
+    <wsdl:part name="FIRSTNAME" type="s:string" />
+    <wsdl:part name="LASTNAME" type="s:string" />
+    <wsdl:part name="MIDDLENAME" type="s:string" />
+    <wsdl:part name="FATHERSNAME" type="s:string" />
+    <wsdl:part name="HOUSE_NO" type="s:string" />
+    <wsdl:part name="BUILDING" type="s:string" />
+    <wsdl:part name="STR_SUPPL1" type="s:string" />
+    <wsdl:part name="STR_SUPPL2" type="s:string" />
+    <wsdl:part name="STR_SUPPL3" type="s:string" />
+    <wsdl:part name="POSTL_COD1" type="s:string" />
+    <wsdl:part name="CITY" type="s:string" />
+    <wsdl:part name="E_MAIL" type="s:string" />
+    <wsdl:part name="LANDLINE" type="s:string" />
+    <wsdl:part name="MOBILE" type="s:string" />
+    <wsdl:part name="FEMALE" type="s:string" />
+    <wsdl:part name="MALE" type="s:string" />
+    <wsdl:part name="JOBGR" type="s:string" />
+    <wsdl:part name="LEGITTYPE" type="s:string" />
+    <wsdl:part name="IDNUMBER" type="s:string" />
+    <wsdl:part name="ORDER_TYPE" type="s:string" />
+    <wsdl:part name="SHORTTEXT" type="s:string" />
+    <wsdl:part name="PLANNINGPLANT" type="s:string" />
+    <wsdl:part name="WORKCENTRE" type="s:string" />
+    <wsdl:part name="SYSTEMCOND" type="s:string" />
+    <wsdl:part name="PMACTIVITYTYPE" type="s:string" />
+    <wsdl:part name="REQUESTNUM" type="s:string" />
+    <wsdl:part name="NNUMBER" type="s:string" />
+    <wsdl:part name="APPLIEDCAT" type="s:string" />
+    <wsdl:part name="APPLIEDLOAD" type="s:string" />
+    <wsdl:part name="CONNECTIONTYPE" type="s:string" />
+    <wsdl:part name="ORDERID" type="s:string" />
+    <wsdl:part name="FLAG" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SOHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SO_ECCHttpPostIn">
+    <wsdl:part name="PARTNERCATEGORY" type="s:string" />
+    <wsdl:part name="PARTNERTYPE" type="s:string" />
+    <wsdl:part name="TITLE_KEY" type="s:string" />
+    <wsdl:part name="FIRSTNAME" type="s:string" />
+    <wsdl:part name="LASTNAME" type="s:string" />
+    <wsdl:part name="MIDDLENAME" type="s:string" />
+    <wsdl:part name="FATHERSNAME" type="s:string" />
+    <wsdl:part name="HOUSE_NO" type="s:string" />
+    <wsdl:part name="BUILDING" type="s:string" />
+    <wsdl:part name="STR_SUPPL1" type="s:string" />
+    <wsdl:part name="STR_SUPPL2" type="s:string" />
+    <wsdl:part name="STR_SUPPL3" type="s:string" />
+    <wsdl:part name="POSTL_COD1" type="s:string" />
+    <wsdl:part name="CITY" type="s:string" />
+    <wsdl:part name="E_MAIL" type="s:string" />
+    <wsdl:part name="LANDLINE" type="s:string" />
+    <wsdl:part name="MOBILE" type="s:string" />
+    <wsdl:part name="FEMALE" type="s:string" />
+    <wsdl:part name="MALE" type="s:string" />
+    <wsdl:part name="JOBGR" type="s:string" />
+    <wsdl:part name="IDTYPE" type="s:string" />
+    <wsdl:part name="IDNUMBER" type="s:string" />
+    <wsdl:part name="ORDER_TYPE" type="s:string" />
+    <wsdl:part name="SHORTTEXT" type="s:string" />
+    <wsdl:part name="PLANNINGPLANT" type="s:string" />
+    <wsdl:part name="WORKCENTRE" type="s:string" />
+    <wsdl:part name="SYSTEMCOND" type="s:string" />
+    <wsdl:part name="PMACTIVITYTYPE" type="s:string" />
+    <wsdl:part name="REQUESTNUM" type="s:string" />
+    <wsdl:part name="NNUMBER" type="s:string" />
+    <wsdl:part name="APPLIEDCAT" type="s:string" />
+    <wsdl:part name="APPLIEDLOAD" type="s:string" />
+    <wsdl:part name="CONNECTIONTYPE" type="s:string" />
+    <wsdl:part name="ORDERID" type="s:string" />
+    <wsdl:part name="FLAG" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DSS_SO_ECCHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_ZDSS_WEB_LINKHttpPostIn">
+    <wsdl:part name="I_ILART" type="s:string" />
+    <wsdl:part name="I_VKONT" type="s:string" />
+    <wsdl:part name="I_VKONA" type="s:string" />
+    <wsdl:part name="PARTNERCATEGORY" type="s:string" />
+    <wsdl:part name="PARTNERTYPE" type="s:string" />
+    <wsdl:part name="TITLE_KEY" type="s:string" />
+    <wsdl:part name="FIRSTNAME" type="s:string" />
+    <wsdl:part name="LASTNAME" type="s:string" />
+    <wsdl:part name="MIDDLENAME" type="s:string" />
+    <wsdl:part name="FATHERSNAME" type="s:string" />
+    <wsdl:part name="HOUSE_NO" type="s:string" />
+    <wsdl:part name="BUILDING" type="s:string" />
+    <wsdl:part name="STR_SUPPL1" type="s:string" />
+    <wsdl:part name="STR_SUPPL2" type="s:string" />
+    <wsdl:part name="STR_SUPPL3" type="s:string" />
+    <wsdl:part name="POSTL_COD1" type="s:string" />
+    <wsdl:part name="CITY" type="s:string" />
+    <wsdl:part name="E_MAIL" type="s:string" />
+    <wsdl:part name="LANDLINE" type="s:string" />
+    <wsdl:part name="MOBILE" type="s:string" />
+    <wsdl:part name="FEMALE" type="s:string" />
+    <wsdl:part name="MALE" type="s:string" />
+    <wsdl:part name="JOBGR" type="s:string" />
+    <wsdl:part name="IDTYPE" type="s:string" />
+    <wsdl:part name="IDNUMBER" type="s:string" />
+    <wsdl:part name="PLANNINGPLANT" type="s:string" />
+    <wsdl:part name="WORKCENTRE" type="s:string" />
+    <wsdl:part name="SYSTEMCOND" type="s:string" />
+    <wsdl:part name="APPLIEDCAT" type="s:string" />
+    <wsdl:part name="APPLIEDLOAD" type="s:string" />
+    <wsdl:part name="APPLIEDLOADKVA" type="s:string" />
+    <wsdl:part name="CONNECTIONTYPE" type="s:string" />
+    <wsdl:part name="STATEMENT_CA" type="s:string" />
+    <wsdl:part name="START_DATE" type="s:string" />
+    <wsdl:part name="START_TIME" type="s:string" />
+    <wsdl:part name="FINISH_DATE" type="s:string" />
+    <wsdl:part name="FINISH_TIME" type="s:string" />
+    <wsdl:part name="SORTFIELD" type="s:string" />
+    <wsdl:part name="ABKRS" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_ZDSS_WEB_LINKHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ENFORCEMENTHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strContract" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ENFORCEMENTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBI_WEBBILL_HISTHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strBillMonth" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBI_WEBBILL_HISTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_IVRSHttpPostIn">
+    <wsdl:part name="strContractAccountNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_IVRSHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_DSS_ISU_CA_DISPLAYHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strCRNNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="Z_BAPI_DSS_ISU_CA_DISPLAYHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIEBIZORDSTATUSHttpPostIn">
+    <wsdl:part name="stOrderNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPIEBIZORDSTATUSHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_UPDATE_TNOHttpPostIn">
+    <wsdl:part name="strCA_no" type="s:string" />
+    <wsdl:part name="strTelephone" type="s:string" />
+    <wsdl:part name="strMobile" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strLandmark" type="s:string" />
+    <wsdl:part name="strDISPATCH_CTRL" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_UPDATE_TNOHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IDENTIFICATIONHttpPostIn">
+    <wsdl:part name="strBP_NO" type="s:string" />
+    <wsdl:part name="strType_ID" type="s:string" />
+    <wsdl:part name="strID_Num" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_IDENTIFICATIONHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ZCS_CLI_WEBHttpPostIn">
+    <wsdl:part name="strTelephoneNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ZCS_CLI_WEBHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_TEAM_ALLOCATIONHttpPostIn">
+    <wsdl:part name="strIEMINumber" type="s:string" />
+    <wsdl:part name="strILART" type="s:string" />
+    <wsdl:part name="strDate" type="s:string" />
+    <wsdl:part name="strTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_TEAM_ALLOCATIONHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_BI_EMAIL_COUNTHttpPostIn">
+    <wsdl:part name="strCRONAM" type="s:string" />
+    <wsdl:part name="strOBJTP" type="s:string" />
+    <wsdl:part name="strDateYYYYMMDD" type="s:string" />
+    <wsdl:part name="strTime" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_BI_EMAIL_COUNTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_EDISTRICTHttpPostIn">
+    <wsdl:part name="strCANumber" type="s:string" />
+    <wsdl:part name="strCRNNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_EDISTRICTHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DEMAND_NOTE_ONLINEHttpPostIn">
+    <wsdl:part name="strOrder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_DEMAND_NOTE_ONLINEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ISUACCOUNT_CHANGEHttpPostIn">
+    <wsdl:part name="strCONTRACT_ACCOUNT" type="s:string" />
+    <wsdl:part name="strPartner" type="s:string" />
+    <wsdl:part name="strValidDAte" type="s:string" />
+    <wsdl:part name="strCONTRACTACCOUNTDATA" type="s:string" />
+    <wsdl:part name="strCONTRACTACCOUNTDATAX" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_ISUACCOUNT_CHANGEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_FICA_DEMAND_NOTEHttpPostIn">
+    <wsdl:part name="strORDER_NO" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_FICA_DEMAND_NOTEHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CNT_APP_DETAIL_MOBHttpPostIn">
+    <wsdl:part name="strORDER_TYPE" type="s:string" />
+    <wsdl:part name="strDIVISION" type="s:string" />
+    <wsdl:part name="strAPPOINTMENT_START_DATE" type="s:string" />
+    <wsdl:part name="strAPPOINTMENT_TIME" type="s:string" />
+    <wsdl:part name="strREC_COUNT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_CNT_APP_DETAIL_MOBHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_STATUS163HttpPostIn">
+    <wsdl:part name="strVKONT" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ZBAPI_STATUS163HttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:portType name="WebServiceSoap">
+    <wsdl:operation name="ZBAPIDOCLIST">
+      <wsdl:input message="tns:ZBAPIDOCLISTSoapIn" />
+      <wsdl:output message="tns:ZBAPIDOCLISTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DISPLAY_BILL_WEB">
+      <wsdl:input message="tns:ZBAPI_DISPLAY_BILL_WEBSoapIn" />
+      <wsdl:output message="tns:ZBAPI_DISPLAY_BILL_WEBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IVR_CREATESO_ISU">
+      <wsdl:input message="tns:ZBAPI_IVR_CREATESO_ISUSoapIn" />
+      <wsdl:output message="tns:ZBAPI_IVR_CREATESO_ISUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+      <wsdl:input message="tns:Z_BAPI_CMS_ISU_CA_DISPLAYSoapIn" />
+      <wsdl:output message="tns:Z_BAPI_CMS_ISU_CA_DISPLAYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CREATESO_POST">
+      <wsdl:input message="tns:ZBAPI_CREATESO_POSTSoapIn" />
+      <wsdl:output message="tns:ZBAPI_CREATESO_POSTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CALERT">
+      <wsdl:input message="tns:ZBAPI_CALERTSoapIn" />
+      <wsdl:output message="tns:ZBAPI_CALERTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ONLINE_BILL_PDF">
+      <wsdl:input message="tns:ZBAPI_ONLINE_BILL_PDFSoapIn" />
+      <wsdl:output message="tns:ZBAPI_ONLINE_BILL_PDFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO">
+      <wsdl:input message="tns:ZBAPI_DSS_SOSoapIn" />
+      <wsdl:output message="tns:ZBAPI_DSS_SOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO_ECC">
+      <wsdl:input message="tns:ZBAPI_DSS_SO_ECCSoapIn" />
+      <wsdl:output message="tns:ZBAPI_DSS_SO_ECCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_ZDSS_WEB_LINK">
+      <wsdl:input message="tns:Z_BAPI_ZDSS_WEB_LINKSoapIn" />
+      <wsdl:output message="tns:Z_BAPI_ZDSS_WEB_LINKSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ENFORCEMENT">
+      <wsdl:input message="tns:ZBAPI_ENFORCEMENTSoapIn" />
+      <wsdl:output message="tns:ZBAPI_ENFORCEMENTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBI_WEBBILL_HIST">
+      <wsdl:input message="tns:ZBI_WEBBILL_HISTSoapIn" />
+      <wsdl:output message="tns:ZBI_WEBBILL_HISTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_IVRS">
+      <wsdl:input message="tns:Z_BAPI_IVRSSoapIn" />
+      <wsdl:output message="tns:Z_BAPI_IVRSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+      <wsdl:input message="tns:Z_BAPI_DSS_ISU_CA_DISPLAYSoapIn" />
+      <wsdl:output message="tns:Z_BAPI_DSS_ISU_CA_DISPLAYSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPIEBIZORDSTATUS">
+      <wsdl:input message="tns:ZBAPIEBIZORDSTATUSSoapIn" />
+      <wsdl:output message="tns:ZBAPIEBIZORDSTATUSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_UPDATE_TNO">
+      <wsdl:input message="tns:ZBAPI_UPDATE_TNOSoapIn" />
+      <wsdl:output message="tns:ZBAPI_UPDATE_TNOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IDENTIFICATION">
+      <wsdl:input message="tns:ZBAPI_IDENTIFICATIONSoapIn" />
+      <wsdl:output message="tns:ZBAPI_IDENTIFICATIONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ZCS_CLI_WEB">
+      <wsdl:input message="tns:ZBAPI_ZCS_CLI_WEBSoapIn" />
+      <wsdl:output message="tns:ZBAPI_ZCS_CLI_WEBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_TEAM_ALLOCATION">
+      <wsdl:input message="tns:ZBAPI_TEAM_ALLOCATIONSoapIn" />
+      <wsdl:output message="tns:ZBAPI_TEAM_ALLOCATIONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_BI_EMAIL_COUNT">
+      <wsdl:input message="tns:ZBAPI_BI_EMAIL_COUNTSoapIn" />
+      <wsdl:output message="tns:ZBAPI_BI_EMAIL_COUNTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_EDISTRICT">
+      <wsdl:input message="tns:ZBAPI_EDISTRICTSoapIn" />
+      <wsdl:output message="tns:ZBAPI_EDISTRICTSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_INPUT_CP_DETAILS">
+      <wsdl:input message="tns:Z_BAPI_INPUT_CP_DETAILSSoapIn" />
+      <wsdl:output message="tns:Z_BAPI_INPUT_CP_DETAILSSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DEMAND_NOTE_ONLINE">
+      <wsdl:input message="tns:ZBAPI_DEMAND_NOTE_ONLINESoapIn" />
+      <wsdl:output message="tns:ZBAPI_DEMAND_NOTE_ONLINESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ISUACCOUNT_CHANGE">
+      <wsdl:input message="tns:ZBAPI_ISUACCOUNT_CHANGESoapIn" />
+      <wsdl:output message="tns:ZBAPI_ISUACCOUNT_CHANGESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_FICA_DEMAND_NOTE">
+      <wsdl:input message="tns:ZBAPI_FICA_DEMAND_NOTESoapIn" />
+      <wsdl:output message="tns:ZBAPI_FICA_DEMAND_NOTESoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CNT_APP_DETAIL_MOB">
+      <wsdl:input message="tns:ZBAPI_CNT_APP_DETAIL_MOBSoapIn" />
+      <wsdl:output message="tns:ZBAPI_CNT_APP_DETAIL_MOBSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_STATUS163">
+      <wsdl:input message="tns:ZBAPI_STATUS163SoapIn" />
+      <wsdl:output message="tns:ZBAPI_STATUS163SoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceHttpGet">
+    <wsdl:operation name="ZBAPIDOCLIST">
+      <wsdl:input message="tns:ZBAPIDOCLISTHttpGetIn" />
+      <wsdl:output message="tns:ZBAPIDOCLISTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DISPLAY_BILL_WEB">
+      <wsdl:input message="tns:ZBAPI_DISPLAY_BILL_WEBHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_DISPLAY_BILL_WEBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IVR_CREATESO_ISU">
+      <wsdl:input message="tns:ZBAPI_IVR_CREATESO_ISUHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_IVR_CREATESO_ISUHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+      <wsdl:input message="tns:Z_BAPI_CMS_ISU_CA_DISPLAYHttpGetIn" />
+      <wsdl:output message="tns:Z_BAPI_CMS_ISU_CA_DISPLAYHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CREATESO_POST">
+      <wsdl:input message="tns:ZBAPI_CREATESO_POSTHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_CREATESO_POSTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CALERT">
+      <wsdl:input message="tns:ZBAPI_CALERTHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_CALERTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ONLINE_BILL_PDF">
+      <wsdl:input message="tns:ZBAPI_ONLINE_BILL_PDFHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_ONLINE_BILL_PDFHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO">
+      <wsdl:input message="tns:ZBAPI_DSS_SOHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_DSS_SOHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO_ECC">
+      <wsdl:input message="tns:ZBAPI_DSS_SO_ECCHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_DSS_SO_ECCHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_ZDSS_WEB_LINK">
+      <wsdl:input message="tns:Z_BAPI_ZDSS_WEB_LINKHttpGetIn" />
+      <wsdl:output message="tns:Z_BAPI_ZDSS_WEB_LINKHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ENFORCEMENT">
+      <wsdl:input message="tns:ZBAPI_ENFORCEMENTHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_ENFORCEMENTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBI_WEBBILL_HIST">
+      <wsdl:input message="tns:ZBI_WEBBILL_HISTHttpGetIn" />
+      <wsdl:output message="tns:ZBI_WEBBILL_HISTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_IVRS">
+      <wsdl:input message="tns:Z_BAPI_IVRSHttpGetIn" />
+      <wsdl:output message="tns:Z_BAPI_IVRSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+      <wsdl:input message="tns:Z_BAPI_DSS_ISU_CA_DISPLAYHttpGetIn" />
+      <wsdl:output message="tns:Z_BAPI_DSS_ISU_CA_DISPLAYHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPIEBIZORDSTATUS">
+      <wsdl:input message="tns:ZBAPIEBIZORDSTATUSHttpGetIn" />
+      <wsdl:output message="tns:ZBAPIEBIZORDSTATUSHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_UPDATE_TNO">
+      <wsdl:input message="tns:ZBAPI_UPDATE_TNOHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_UPDATE_TNOHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IDENTIFICATION">
+      <wsdl:input message="tns:ZBAPI_IDENTIFICATIONHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_IDENTIFICATIONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ZCS_CLI_WEB">
+      <wsdl:input message="tns:ZBAPI_ZCS_CLI_WEBHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_ZCS_CLI_WEBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_TEAM_ALLOCATION">
+      <wsdl:input message="tns:ZBAPI_TEAM_ALLOCATIONHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_TEAM_ALLOCATIONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_BI_EMAIL_COUNT">
+      <wsdl:input message="tns:ZBAPI_BI_EMAIL_COUNTHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_BI_EMAIL_COUNTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_EDISTRICT">
+      <wsdl:input message="tns:ZBAPI_EDISTRICTHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_EDISTRICTHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DEMAND_NOTE_ONLINE">
+      <wsdl:input message="tns:ZBAPI_DEMAND_NOTE_ONLINEHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_DEMAND_NOTE_ONLINEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ISUACCOUNT_CHANGE">
+      <wsdl:input message="tns:ZBAPI_ISUACCOUNT_CHANGEHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_ISUACCOUNT_CHANGEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_FICA_DEMAND_NOTE">
+      <wsdl:input message="tns:ZBAPI_FICA_DEMAND_NOTEHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_FICA_DEMAND_NOTEHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CNT_APP_DETAIL_MOB">
+      <wsdl:input message="tns:ZBAPI_CNT_APP_DETAIL_MOBHttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_CNT_APP_DETAIL_MOBHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_STATUS163">
+      <wsdl:input message="tns:ZBAPI_STATUS163HttpGetIn" />
+      <wsdl:output message="tns:ZBAPI_STATUS163HttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebServiceHttpPost">
+    <wsdl:operation name="ZBAPIDOCLIST">
+      <wsdl:input message="tns:ZBAPIDOCLISTHttpPostIn" />
+      <wsdl:output message="tns:ZBAPIDOCLISTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DISPLAY_BILL_WEB">
+      <wsdl:input message="tns:ZBAPI_DISPLAY_BILL_WEBHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_DISPLAY_BILL_WEBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IVR_CREATESO_ISU">
+      <wsdl:input message="tns:ZBAPI_IVR_CREATESO_ISUHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_IVR_CREATESO_ISUHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+      <wsdl:input message="tns:Z_BAPI_CMS_ISU_CA_DISPLAYHttpPostIn" />
+      <wsdl:output message="tns:Z_BAPI_CMS_ISU_CA_DISPLAYHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CREATESO_POST">
+      <wsdl:input message="tns:ZBAPI_CREATESO_POSTHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_CREATESO_POSTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CALERT">
+      <wsdl:input message="tns:ZBAPI_CALERTHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_CALERTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ONLINE_BILL_PDF">
+      <wsdl:input message="tns:ZBAPI_ONLINE_BILL_PDFHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_ONLINE_BILL_PDFHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO">
+      <wsdl:input message="tns:ZBAPI_DSS_SOHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_DSS_SOHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO_ECC">
+      <wsdl:input message="tns:ZBAPI_DSS_SO_ECCHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_DSS_SO_ECCHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_ZDSS_WEB_LINK">
+      <wsdl:input message="tns:Z_BAPI_ZDSS_WEB_LINKHttpPostIn" />
+      <wsdl:output message="tns:Z_BAPI_ZDSS_WEB_LINKHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ENFORCEMENT">
+      <wsdl:input message="tns:ZBAPI_ENFORCEMENTHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_ENFORCEMENTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBI_WEBBILL_HIST">
+      <wsdl:input message="tns:ZBI_WEBBILL_HISTHttpPostIn" />
+      <wsdl:output message="tns:ZBI_WEBBILL_HISTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_IVRS">
+      <wsdl:input message="tns:Z_BAPI_IVRSHttpPostIn" />
+      <wsdl:output message="tns:Z_BAPI_IVRSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+      <wsdl:input message="tns:Z_BAPI_DSS_ISU_CA_DISPLAYHttpPostIn" />
+      <wsdl:output message="tns:Z_BAPI_DSS_ISU_CA_DISPLAYHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPIEBIZORDSTATUS">
+      <wsdl:input message="tns:ZBAPIEBIZORDSTATUSHttpPostIn" />
+      <wsdl:output message="tns:ZBAPIEBIZORDSTATUSHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_UPDATE_TNO">
+      <wsdl:input message="tns:ZBAPI_UPDATE_TNOHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_UPDATE_TNOHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IDENTIFICATION">
+      <wsdl:input message="tns:ZBAPI_IDENTIFICATIONHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_IDENTIFICATIONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ZCS_CLI_WEB">
+      <wsdl:input message="tns:ZBAPI_ZCS_CLI_WEBHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_ZCS_CLI_WEBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_TEAM_ALLOCATION">
+      <wsdl:input message="tns:ZBAPI_TEAM_ALLOCATIONHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_TEAM_ALLOCATIONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_BI_EMAIL_COUNT">
+      <wsdl:input message="tns:ZBAPI_BI_EMAIL_COUNTHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_BI_EMAIL_COUNTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_EDISTRICT">
+      <wsdl:input message="tns:ZBAPI_EDISTRICTHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_EDISTRICTHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DEMAND_NOTE_ONLINE">
+      <wsdl:input message="tns:ZBAPI_DEMAND_NOTE_ONLINEHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_DEMAND_NOTE_ONLINEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ISUACCOUNT_CHANGE">
+      <wsdl:input message="tns:ZBAPI_ISUACCOUNT_CHANGEHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_ISUACCOUNT_CHANGEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_FICA_DEMAND_NOTE">
+      <wsdl:input message="tns:ZBAPI_FICA_DEMAND_NOTEHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_FICA_DEMAND_NOTEHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CNT_APP_DETAIL_MOB">
+      <wsdl:input message="tns:ZBAPI_CNT_APP_DETAIL_MOBHttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_CNT_APP_DETAIL_MOBHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_STATUS163">
+      <wsdl:input message="tns:ZBAPI_STATUS163HttpPostIn" />
+      <wsdl:output message="tns:ZBAPI_STATUS163HttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZBAPIDOCLIST">
+      <soap:operation soapAction="http://tempuri.org/ZBAPIDOCLIST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DISPLAY_BILL_WEB">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_DISPLAY_BILL_WEB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IVR_CREATESO_ISU">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_IVR_CREATESO_ISU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+      <soap:operation soapAction="http://tempuri.org/Z_BAPI_CMS_ISU_CA_DISPLAY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CREATESO_POST">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_CREATESO_POST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CALERT">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_CALERT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ONLINE_BILL_PDF">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_ONLINE_BILL_PDF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_DSS_SO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO_ECC">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_DSS_SO_ECC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_ZDSS_WEB_LINK">
+      <soap:operation soapAction="http://tempuri.org/Z_BAPI_ZDSS_WEB_LINK" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ENFORCEMENT">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_ENFORCEMENT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBI_WEBBILL_HIST">
+      <soap:operation soapAction="http://tempuri.org/ZBI_WEBBILL_HIST" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_IVRS">
+      <soap:operation soapAction="http://tempuri.org/Z_BAPI_IVRS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+      <soap:operation soapAction="http://tempuri.org/Z_BAPI_DSS_ISU_CA_DISPLAY" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPIEBIZORDSTATUS">
+      <soap:operation soapAction="http://tempuri.org/ZBAPIEBIZORDSTATUS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_UPDATE_TNO">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_UPDATE_TNO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IDENTIFICATION">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_IDENTIFICATION" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ZCS_CLI_WEB">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_ZCS_CLI_WEB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_TEAM_ALLOCATION">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_TEAM_ALLOCATION" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_BI_EMAIL_COUNT">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_BI_EMAIL_COUNT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_EDISTRICT">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_EDISTRICT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_INPUT_CP_DETAILS">
+      <soap:operation soapAction="http://tempuri.org/Z_BAPI_INPUT_CP_DETAILS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DEMAND_NOTE_ONLINE">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_DEMAND_NOTE_ONLINE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ISUACCOUNT_CHANGE">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_ISUACCOUNT_CHANGE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_FICA_DEMAND_NOTE">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_FICA_DEMAND_NOTE" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CNT_APP_DETAIL_MOB">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_CNT_APP_DETAIL_MOB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_STATUS163">
+      <soap:operation soapAction="http://tempuri.org/ZBAPI_STATUS163" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ZBAPIDOCLIST">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPIDOCLIST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DISPLAY_BILL_WEB">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_DISPLAY_BILL_WEB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IVR_CREATESO_ISU">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_IVR_CREATESO_ISU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+      <soap12:operation soapAction="http://tempuri.org/Z_BAPI_CMS_ISU_CA_DISPLAY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CREATESO_POST">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_CREATESO_POST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CALERT">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_CALERT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ONLINE_BILL_PDF">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_ONLINE_BILL_PDF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_DSS_SO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO_ECC">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_DSS_SO_ECC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_ZDSS_WEB_LINK">
+      <soap12:operation soapAction="http://tempuri.org/Z_BAPI_ZDSS_WEB_LINK" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ENFORCEMENT">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_ENFORCEMENT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBI_WEBBILL_HIST">
+      <soap12:operation soapAction="http://tempuri.org/ZBI_WEBBILL_HIST" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_IVRS">
+      <soap12:operation soapAction="http://tempuri.org/Z_BAPI_IVRS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+      <soap12:operation soapAction="http://tempuri.org/Z_BAPI_DSS_ISU_CA_DISPLAY" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPIEBIZORDSTATUS">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPIEBIZORDSTATUS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_UPDATE_TNO">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_UPDATE_TNO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IDENTIFICATION">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_IDENTIFICATION" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ZCS_CLI_WEB">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_ZCS_CLI_WEB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_TEAM_ALLOCATION">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_TEAM_ALLOCATION" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_BI_EMAIL_COUNT">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_BI_EMAIL_COUNT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_EDISTRICT">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_EDISTRICT" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_INPUT_CP_DETAILS">
+      <soap12:operation soapAction="http://tempuri.org/Z_BAPI_INPUT_CP_DETAILS" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DEMAND_NOTE_ONLINE">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_DEMAND_NOTE_ONLINE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ISUACCOUNT_CHANGE">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_ISUACCOUNT_CHANGE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_FICA_DEMAND_NOTE">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_FICA_DEMAND_NOTE" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CNT_APP_DETAIL_MOB">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_CNT_APP_DETAIL_MOB" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_STATUS163">
+      <soap12:operation soapAction="http://tempuri.org/ZBAPI_STATUS163" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceHttpGet" type="tns:WebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="ZBAPIDOCLIST">
+      <http:operation location="/ZBAPIDOCLIST" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DISPLAY_BILL_WEB">
+      <http:operation location="/ZBAPI_DISPLAY_BILL_WEB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IVR_CREATESO_ISU">
+      <http:operation location="/ZBAPI_IVR_CREATESO_ISU" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+      <http:operation location="/Z_BAPI_CMS_ISU_CA_DISPLAY" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CREATESO_POST">
+      <http:operation location="/ZBAPI_CREATESO_POST" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CALERT">
+      <http:operation location="/ZBAPI_CALERT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ONLINE_BILL_PDF">
+      <http:operation location="/ZBAPI_ONLINE_BILL_PDF" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO">
+      <http:operation location="/ZBAPI_DSS_SO" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO_ECC">
+      <http:operation location="/ZBAPI_DSS_SO_ECC" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_ZDSS_WEB_LINK">
+      <http:operation location="/Z_BAPI_ZDSS_WEB_LINK" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ENFORCEMENT">
+      <http:operation location="/ZBAPI_ENFORCEMENT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBI_WEBBILL_HIST">
+      <http:operation location="/ZBI_WEBBILL_HIST" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_IVRS">
+      <http:operation location="/Z_BAPI_IVRS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+      <http:operation location="/Z_BAPI_DSS_ISU_CA_DISPLAY" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPIEBIZORDSTATUS">
+      <http:operation location="/ZBAPIEBIZORDSTATUS" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_UPDATE_TNO">
+      <http:operation location="/ZBAPI_UPDATE_TNO" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IDENTIFICATION">
+      <http:operation location="/ZBAPI_IDENTIFICATION" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ZCS_CLI_WEB">
+      <http:operation location="/ZBAPI_ZCS_CLI_WEB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_TEAM_ALLOCATION">
+      <http:operation location="/ZBAPI_TEAM_ALLOCATION" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_BI_EMAIL_COUNT">
+      <http:operation location="/ZBAPI_BI_EMAIL_COUNT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_EDISTRICT">
+      <http:operation location="/ZBAPI_EDISTRICT" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DEMAND_NOTE_ONLINE">
+      <http:operation location="/ZBAPI_DEMAND_NOTE_ONLINE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ISUACCOUNT_CHANGE">
+      <http:operation location="/ZBAPI_ISUACCOUNT_CHANGE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_FICA_DEMAND_NOTE">
+      <http:operation location="/ZBAPI_FICA_DEMAND_NOTE" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CNT_APP_DETAIL_MOB">
+      <http:operation location="/ZBAPI_CNT_APP_DETAIL_MOB" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_STATUS163">
+      <http:operation location="/ZBAPI_STATUS163" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebServiceHttpPost" type="tns:WebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="ZBAPIDOCLIST">
+      <http:operation location="/ZBAPIDOCLIST" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DISPLAY_BILL_WEB">
+      <http:operation location="/ZBAPI_DISPLAY_BILL_WEB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IVR_CREATESO_ISU">
+      <http:operation location="/ZBAPI_IVR_CREATESO_ISU" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_CMS_ISU_CA_DISPLAY">
+      <http:operation location="/Z_BAPI_CMS_ISU_CA_DISPLAY" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CREATESO_POST">
+      <http:operation location="/ZBAPI_CREATESO_POST" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CALERT">
+      <http:operation location="/ZBAPI_CALERT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ONLINE_BILL_PDF">
+      <http:operation location="/ZBAPI_ONLINE_BILL_PDF" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO">
+      <http:operation location="/ZBAPI_DSS_SO" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DSS_SO_ECC">
+      <http:operation location="/ZBAPI_DSS_SO_ECC" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_ZDSS_WEB_LINK">
+      <http:operation location="/Z_BAPI_ZDSS_WEB_LINK" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ENFORCEMENT">
+      <http:operation location="/ZBAPI_ENFORCEMENT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBI_WEBBILL_HIST">
+      <http:operation location="/ZBI_WEBBILL_HIST" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_IVRS">
+      <http:operation location="/Z_BAPI_IVRS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Z_BAPI_DSS_ISU_CA_DISPLAY">
+      <http:operation location="/Z_BAPI_DSS_ISU_CA_DISPLAY" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPIEBIZORDSTATUS">
+      <http:operation location="/ZBAPIEBIZORDSTATUS" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_UPDATE_TNO">
+      <http:operation location="/ZBAPI_UPDATE_TNO" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_IDENTIFICATION">
+      <http:operation location="/ZBAPI_IDENTIFICATION" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ZCS_CLI_WEB">
+      <http:operation location="/ZBAPI_ZCS_CLI_WEB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_TEAM_ALLOCATION">
+      <http:operation location="/ZBAPI_TEAM_ALLOCATION" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_BI_EMAIL_COUNT">
+      <http:operation location="/ZBAPI_BI_EMAIL_COUNT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_EDISTRICT">
+      <http:operation location="/ZBAPI_EDISTRICT" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_DEMAND_NOTE_ONLINE">
+      <http:operation location="/ZBAPI_DEMAND_NOTE_ONLINE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_ISUACCOUNT_CHANGE">
+      <http:operation location="/ZBAPI_ISUACCOUNT_CHANGE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_FICA_DEMAND_NOTE">
+      <http:operation location="/ZBAPI_FICA_DEMAND_NOTE" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_CNT_APP_DETAIL_MOB">
+      <http:operation location="/ZBAPI_CNT_APP_DETAIL_MOB" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ZBAPI_STATUS163">
+      <http:operation location="/ZBAPI_STATUS163" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService">
+    <wsdl:port name="WebServiceSoap" binding="tns:WebServiceSoap">
+      <soap:address location="http://10.8.61.235/delhiwsD92/isuservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceSoap12" binding="tns:WebServiceSoap12">
+      <soap12:address location="http://10.8.61.235/delhiwsD92/isuservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceHttpGet" binding="tns:WebServiceHttpGet">
+      <http:address location="http://10.8.61.235/delhiwsD92/isuservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebServiceHttpPost" binding="tns:WebServiceHttpPost">
+      <http:address location="http://10.8.61.235/delhiwsD92/isuservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
